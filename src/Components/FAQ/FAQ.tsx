@@ -39,7 +39,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="max-w-4xl mx-auto px-6 py-16">
+    <section className="dark:bg-white max-w-4xl mx-auto px-6 sm:py-10">
       {/* Header */}
       <div className="text-center mb-10">
         <span className="inline-block px-3 py-1 text-sm font-medium text-gray-500 bg-gray-100 rounded-full">

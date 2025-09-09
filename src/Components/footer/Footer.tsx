@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-50 px-4">
+        <footer className="bg-gray-50 px-4 dark:bg-gray-50">
             {/* Newsletter Section */}
             <div className="bg-[#002D1B] text-white rounded-xl max-w-7xl px-6 py-10 mt-10 mx-auto">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">

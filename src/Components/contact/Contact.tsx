@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 import Form from "../form/Form";
 export default function Contact() {
     return (
-        <section className="relative px-4 py-12 bg-[#F9FAFB]">
+        <section className="relative px-4 py-12 bg-[#F9FAFB] dark:bg-[#F9FAFB]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 {/* Left Side - Contact Information */}
                 <div>

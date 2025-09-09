@@ -42,7 +42,7 @@ const steps: Step[] = [
 
 export default function AuditWorkflow() {
   return (
-    <section className="relative py-20 px-4">
+    <section className="relative sm:py-15 px-4">
       <div className="container mx-auto">
         {/* Badge */}
         <div className="mb-4 text-center">

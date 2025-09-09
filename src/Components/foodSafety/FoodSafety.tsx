@@ -4,7 +4,7 @@ import { Button } from "../ui/Button"
 
 export default function FoodSafetyPage() {
   return (
-    <section className="min-h-screen bg-gradient-to-r from-white to-sky-50">
+    <section className="min-h-screen bg-gradient-to-r from-white to-sky-50 dark:bg-white">
       <div className="container mx-auto px-4 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start border border-gray-100 px-6 py-8 rounded-xl">
           {/* Left Column - First Image */}

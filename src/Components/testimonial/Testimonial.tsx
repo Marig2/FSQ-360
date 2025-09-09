@@ -139,4 +139,4 @@ export default function Testimonial() {
       </section>
     </main>
   )
-}
+};

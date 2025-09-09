@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function ContactPage() {
     return (
-        <section className="relative bg-gray-50 min-h-screen text-center pt-20 px-4 mt-6">
+        <section className="relative bg-gray-50 min-h-screen text-center pt-20 px-4 mt-6 dark:bg-white">
             <div className="container mx-auto grid gap-4 grid-cols-1 px-3 py-6 ">
                 {/* Badge */}
                 <div className="flex justify-center">

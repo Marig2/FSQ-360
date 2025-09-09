@@ -19,7 +19,7 @@ const Partners: React.FC = () => {
   ];
 
   return (
-    <section className="bg-gray-900 text-white py-16 px-4">
+    <section className="bg-gray-900 dark:bg-gray-900 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="text-center lg:text-left">

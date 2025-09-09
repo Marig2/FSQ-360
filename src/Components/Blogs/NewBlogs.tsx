@@ -8,7 +8,7 @@ export default function NewBlogs() {
   const [activeTab, setActiveTab] = useState("View all");
   const tabs = ['View all', 'Design', 'Product', 'Software Development', 'Customer Success'];
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8">
+    <section className="max-w-7xl mx-auto px-4 py-8 dark:bg-white">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
           <nav className="flex justify-center" aria-label="Solutions tabs">

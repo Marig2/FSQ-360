@@ -27,7 +27,6 @@ export default function Solutions() {
         },
     ]
 
-    // Track which solution is expanded
     const [activeIndex, setActiveIndex] = useState<number | null>(0)
 
     return (

@@ -104,7 +104,7 @@ const posts: Post[] = [
 export default function BlogsSections() {
   return (
     <section className="py-16 px-6">
-      <div className="container mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 dark:bg-white">
         {posts.map((post) => (
           <div
             key={post.id}

@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { Card } from "../../ui/Card"
+import { motion } from "framer-motion"
 
 const industries = [
   {
@@ -82,24 +83,41 @@ export default function ManagementFeatures() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15 }
+            }
+          }}
+        >
           {industries.map((industry) => (
-            <Card
+            <motion.div
               key={industry.id}
-              className="flex flex-col items-center text-center bg-gray-50 rounded-xl p-6 transition"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
             >
-              <Image
-                src={industry.icon}
-                alt={industry.title}
-                width={60}
-                height={60}
-                className="object-contain mb-4"
-              />
-              <h3 className="text-2xl font-semibold mb-2">{industry.title}</h3>
-              <p className="text-gray-600 text-base">{industry.description}</p>
-            </Card>
+              <Card className="flex flex-col items-center text-center bg-gray-50 rounded-xl p-6 transition">
+                <Image
+                  src={industry.icon}
+                  alt={industry.title}
+                  width={60}
+                  height={60}
+                  className="object-contain mb-4"
+                />
+                <h3 className="text-2xl font-semibold mb-2">{industry.title}</h3>
+                <p className="text-gray-600 text-base">{industry.description}</p>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

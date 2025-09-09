@@ -9,7 +9,7 @@ import React from 'react'
 
 export default function SupplierManagement() {
   return (
-    <div>
+    <div className='w-full dark:bg-white'>
         <Banner/>
         <Navbar/>
         <SupplierHero/>

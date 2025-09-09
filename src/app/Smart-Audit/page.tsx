@@ -9,7 +9,7 @@ import ComplianceFeatures from '@/Components/Products/smart-audit/ComplianceFeat
 import ManagementFeatures from '@/Components/Products/smart-audit/ManagementFeatures'
 export default function SmartAudit() {
   return (
-    <div className="w-full">
+    <div className="w-full dark:bg-white">
       <Navbar/>
       <AuditHero/>
       <ManagementFeatures/>

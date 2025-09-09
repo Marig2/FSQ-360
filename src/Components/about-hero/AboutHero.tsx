@@ -24,7 +24,7 @@ export default function AboutHero({
 
 
   return (
-    <section className="relative text-center pt-20 px-4 mt-6">
+    <section className="relative text-center pt-20 sm:pt-10 px-4 mt-6 dark:bg-white">
       <div className="container mx-auto grid gap-4 grid-cols-1 bg-gray-50 px-3 py-6 rounded-4xl">
         {/* Badge */}
         <div className="flex justify-center">

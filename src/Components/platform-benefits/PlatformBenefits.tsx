@@ -28,7 +28,7 @@ const PlatformBenefits: React.FC = () => {
 
 
     return (
-        <section className="bg-gray-900 text-white py-16 px-6">
+        <section className="bg-gray-900 dark:bg-gray-900 text-white py-16 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="relative w-full h-[400px] md:h-[500px]">
                     <Image

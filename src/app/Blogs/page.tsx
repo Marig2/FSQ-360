@@ -10,11 +10,11 @@ export default function Blogs() {
     const [search, setSearch] = useState<string>("");
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
-    console.log("Search value:", e.target.value); // debug
+    console.log("Search value:", e.target.value);
   };
     return (
 
-        <div className='w-full'>
+        <div className='w-full dark:bg-white'>
             <Navbar/>
               <AboutHero
                     badge="Home >> Blogs"

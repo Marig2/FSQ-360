@@ -45,7 +45,7 @@ const featuresData = [
 
 const Features: React.FC = () => {
   return (
-    <section className="px-4 py-6 mt-5">
+    <section className="bg-white dark:bg-white px-4 py-6 mt-5">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl text-center mb-6">
           Powerful Features Built for Food Safety

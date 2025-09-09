@@ -42,7 +42,7 @@ export default function Form() {
   };
 
   return (
-    <section className="bg-white px-6 py-8 rounded-3xl border border-gray-300 mt-8 w-full max-w-2xl mx-auto">
+    <section className="bg-white dark:bg-white px-6 py-8 rounded-3xl border border-gray-300 mt-8 w-full max-w-2xl mx-auto">
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>

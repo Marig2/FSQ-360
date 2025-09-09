@@ -10,7 +10,7 @@ import { LuSend } from "react-icons/lu"
 
 export default function BlogPost() {
     return (
-        <div className="bg-white relative pt-20 px-4 mt-6">
+        <div className="bg-white relative pt-20 px-4 mt-6 dark:bg-white">
             <div className="max-w-7xl mx-auto px-4 py-8">
                 <div className="flex px-12 gap-2 mb-6">
                     <div className="inline-flex items-center px-3 py-1.5 bg-gray-50 rounded-xl text-sm">

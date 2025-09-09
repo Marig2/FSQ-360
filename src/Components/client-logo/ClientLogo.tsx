@@ -21,7 +21,7 @@ const logos = [
 
 export default function ClientLogo() {
   return (
-    <section className="relative text-center pt-20 mt-6">
+    <section className="relative text-center pt-20 mt-6 dark:bg-white">
       <div className="ccontainer mx-auto grid gap-4 grid-cols-1">
 
         <div className="relative flex overflow-hidden">

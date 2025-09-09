@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function CTASection() {
     return (
-        <section className="bg-white px-4 py-12 flex justify-center">
+        <section className="bg-white dark:bg-white px-4 py-12 flex justify-center">
             {/* CTA box */}
-            <div className="bg-[#00A86B] rounded-2xl px-8  flex flex-col lg:flex-row items-center justify-between max-w-6xl w-full relative overflow-hidden">
+            <div className="bg-[#00A86B] rounded-2xl px-8 sm:pt-4 flex flex-col lg:flex-row items-center justify-between max-w-6xl w-full relative overflow-hidden">
 
                 {/* Left Content */}
                 <div className="text-left max-w-xl z-10">

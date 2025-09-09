@@ -7,7 +7,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div>
+    <div className='dark:bg-gray-50'>
         <Banner/>
         <Navbar/>
         <ContactPage/>

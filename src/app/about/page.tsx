@@ -13,7 +13,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div className='w-full'>
+    <div className='w-full dark:bg-white'>
     <Navbar/>
     <AboutHero 
     badge='Home >> About Us'
