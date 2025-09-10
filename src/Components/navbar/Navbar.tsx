@@ -1,33 +1,58 @@
 "use client"
 
 import { useState } from "react"
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/Components/ui/Button"
 import { FiAlignJustify, FiChevronDown } from "react-icons/fi"
 import { FaTimes } from "react-icons/fa"
+import {
+  FiClipboard,
+  FiCheckSquare,
+  FiShield,
+  FiFileText,
+  FiUsers,
+  FiCloud,
+  FiCheckCircle,
+  FiUserCheck,
+  FiActivity,
+  FiRefreshCcw,
+  FiBook,
+  FiBookOpen,
+  FiList,
+  FiPackage,
+  FiUserPlus,
+} from "react-icons/fi"
 
-const navLinks = [
+type NavLink = {
+  name: string
+  href: string
+  icon?: React.ComponentType
+  dropdown?: { name: string; href: string; icon?: React.ComponentType }[]
+}
+
+const navLinks: NavLink[] = [
   {
     name: "Products",
     href: "/Product",
     dropdown: [
-      { name: "Smart Audit", href: "/Smart-Audit" },
-      { name: "Smart CPA", href: "/Smart-CPA" },
-      { name: "Smart Compliance", href: "/Smart-Compliance" },
-      { name: "Smart Docs", href: "/Smart-Docs" },
-      { name: "Smart EMP", href: "/Smart-EMP" },
-      { name: "Smart Farm", href: "/Smart-Farm" },
-      { name: "Smart HACCP", href: "/Smart-HACCP" },
-      { name: "Smart IAM", href: "/Smart-IAM" },
-      { name: "Smart Lab", href: "/Smart-Lab" },
-      { name: "Smart Recall", href: "/Smart-Recall" },
-      { name: "Smart Record", href: "/Smart-Record" },
-      { name: "Smart Regulatory", href: "/Smart-Regulatory" },
-      { name: "Smart Specification", href: "/Smart-Specification" },
-      { name: "Smart Supplier", href: "/Smart-Supplier" },
-      { name: "Smart Training", href: "/Smart-Training" },
-      { name: "Smart Visitor", href: "/Smart-Visitor" },
+      { name: "Smart Audit", href: "/Smart-Audit", icon: FiClipboard },
+      { name: "Smart CAPA", href: "/Smart-CPA", icon: FiCheckSquare },
+      { name: "Smart Compliance", href: "/Smart-Compliance", icon: FiShield },
+      { name: "Smart Docs", href: "/Smart-Docs", icon: FiFileText },
+      { name: "Smart EMP", href: "/Smart-EMP", icon: FiUsers },
+      { name: "Smart Farm", href: "/Smart-Farm", icon: FiCloud },
+      { name: "Smart HACCP", href: "/Smart-HACCP", icon: FiCheckCircle },
+      { name: "Smart IAM", href: "/Smart-IAM", icon: FiUserCheck },
+      { name: "Smart Lab", href: "/Smart-Lab", icon: FiActivity },
+      { name: "Smart Recall", href: "/Smart-Recall", icon: FiRefreshCcw },
+      { name: "Smart Record", href: "/Smart-Record", icon: FiBook },
+      { name: "Smart Regulatory", href: "/Smart-Regulatory", icon: FiBookOpen },
+      { name: "Smart Specification", href: "/Smart-Specification", icon: FiList },
+      { name: "Smart Supplier", href: "/Smart-Supplier", icon: FiPackage },
+      { name: "Smart Training", href: "/Smart-Training", icon: FiBookOpen },
+      { name: "Smart Visitor", href: "/Smart-Visitor", icon: FiUserPlus },
     ],
   },
   { name: "About Us", href: "/about" },
@@ -57,13 +82,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <Image
-                src="/logo.png"
-                alt="logo"
-                width={166}
-                height={48}
-                priority
-              />
+              <Image src="/logo.png" alt="logo" width={166} height={48} priority />
             </Link>
           </div>
 
@@ -86,7 +105,7 @@ export default function Navbar() {
                     />
                   </button>
 
-                  {/* Dropdown */}
+                  {/* Desktop Dropdown */}
                   {activeDropdown === link.name && (
                     <div className="absolute left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-[750px] z-50">
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -94,9 +113,12 @@ export default function Navbar() {
                           <Link
                             key={item.name}
                             href={item.href}
-                            className="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#00A86B] rounded-md text-sm border border-gray-200"
+                            className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#00A86B] rounded-md text-sm border border-gray-200 space-x-2"
                           >
-                            {item.name}
+                            {item.icon && (
+                              <span className="text-lg bg-green-100 p-2 rounded-full">{React.createElement(item.icon)}</span>
+                            )}
+                            <span>{item.name}</span>
                           </Link>
                         ))}
                       </div>
@@ -151,9 +173,7 @@ export default function Navbar() {
             <div key={link.name}>
               <div
                 className="flex items-center justify-between"
-                onClick={() =>
-                  setMobileDropdown(mobileDropdown === link.name ? null : link.name)
-                }
+                onClick={() => setMobileDropdown(mobileDropdown === link.name ? null : link.name)}
               >
                 <Link
                   href={link.href}
@@ -177,10 +197,11 @@ export default function Navbar() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block text-gray-600 hover:text-[#00A86B] whitespace-nowrap"
+                      className="flex items-center text-gray-600 hover:text-[#00A86B] whitespace-nowrap space-x-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      {item.name}
+                      {item.icon && <span className="text-lg">{React.createElement(item.icon)}</span>}
+                      <span>{item.name}</span>
                     </Link>
                   ))}
                 </div>
